@@ -92,9 +92,15 @@
                     <div
                       class="counter-wrapper mt-1 me-2 mb-3 mb-sm-0 d-flex justify-content-between align-items-center"
                     >
-                      <i class="icono fa fa-minus fw-lighter"></i
-                      ><span class="fw-bold">1</span
-                      ><i class="icono fa fa-plus me-md-3"></i>
+                      <i
+                        onclick="{restar(0)}"
+                        class="icono fa fa-minus fw-lighter counter-sub"
+                      ></i
+                      ><span class="fw-bold counter-num">1</span
+                      ><i
+                        onclick="{sumar(0)}"
+                        class="icono fa fa-plus me-md-3 counter-sum"
+                      ></i>
                     </div>
                     <i class="icono fa fa-trash me-md-5"></i>
                   </div>
@@ -120,9 +126,15 @@
                     <div
                       class="counter-wrapper mt-1 me-2 mb-3 mb-sm-0 d-flex justify-content-between align-items-center"
                     >
-                      <i class="icono fa fa-minus fw-lighter"></i
-                      ><span class="fw-bold">1</span
-                      ><i class="icono fa fa-plus me-sm-3"></i>
+                      <i
+                        onclick="{restar(1)}"
+                        class="icono fa fa-minus fw-lighter counter-sub"
+                      ></i
+                      ><span class="fw-bold counter-num">1</span
+                      ><i
+                        onclick="{sumar(1)}"
+                        class="icono fa fa-plus me-sm-3 counter-sum"
+                      ></i>
                     </div>
                     <i class="icono fa fa-trash"></i>
                   </div>
@@ -132,9 +144,58 @@
             </tbody>
           </table>
           <div class="d-flex justify-content-center justify-content-md-end">
-            <span class="text-muted">Subtotal $83.00</span>
+            <span class="text-muted">Total $83.00</span>
           </div>
         </div>
+        <form class="my-5 pay-wrapper">
+          <div class="row mb-3">
+            <div class="col-12 col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  autocomplete="off"
+                  placeholder=" "
+                /><label for="name">Name</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="adress"
+                  autocomplete="off"
+                  placeholder=" "
+                /><label for="adress">Adress</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  autocomplete="off"
+                  placeholder=" "
+                /><label for="email">Email (Optional)</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  autocomplete="off"
+                  placeholder=" "
+                /><label for="phone">Phone Number</label>
+              </div>
+            </div>
+          </div>
+          <button>Pay</button>
+        </form>
 
         <div class="footer-wrapper">
           <hr class="dropdown-divider" />

@@ -14,6 +14,9 @@ let price_wrapper = document.getElementsByClassName('price-wrapper');
 let price_button = document.getElementsByClassName('price-button');
 let price_close_button = document.getElementsByClassName('price-close-button');
 let product_wrapper = document.getElementsByClassName('product-wrapper');
+let counter_num = document.getElementsByClassName('counter-num');
+let counter_sub = document.getElementsByClassName('counter-sub');
+let counter_sum = document.getElementsByClassName('counter-sum');
 
 if (window.screen.width < 576) {
     navbar_nav[0].className += ' nav-close';
@@ -79,3 +82,15 @@ function navigateToProduct (){
         window.location.href = 'product.html';
     }
 }
+
+function sumar (pos) {
+    let currentValue = parseInt(counter_num[pos].innerHTML);
+    counter_num[pos].innerHTML = (currentValue + 1);
+};
+
+function restar (pos) {
+    let currentValue = parseInt(counter_num[pos].innerHTML);
+    if(currentValue > 1){
+        counter_num[pos].innerHTML = (currentValue - 1);
+    }
+};

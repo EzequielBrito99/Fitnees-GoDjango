@@ -77,8 +77,9 @@
               <div
                 class="counter-wrapper mt-1 d-flex justify-content-between align-items-center"
               >
-                <i class="icono fa fa-minus fw-lighter"></i
-                ><span class="fw-bold">1</span><i class="icono fa fa-plus"></i>
+                <i onclick={restar(0)} class="icono fa fa-minus fw-lighter counter-sub"></i
+                ><span class="fw-bold counter-num">1</span>
+                <i onclick={sumar(0)} class="icono fa fa-plus counter-sum"></i>
               </div>
             </div>
             <div class="addCart-button text-center mt-3">Add to cart</div>
