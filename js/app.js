@@ -19,8 +19,9 @@ let counter_sub = document.getElementsByClassName('counter-sub');
 let counter_sum = document.getElementsByClassName('counter-sum');
 
 function navigateToProduct (){
-    console.log(window.location.href)
-    if(window.location.href == 'http://127.0.0.1:5500/index.html'){
+    let url = window.location.href.split('/');
+    let currentPage = url[url.length-1];
+    if(currentPage == 'index.html'){
         window.location.href = 'pages/product.html';
     }else{
         window.location.href = 'product.html';
@@ -39,12 +40,12 @@ function restar (pos) {
     }
 };
 
-if (window.screen.width < 576) {
-    navbar_nav[0].className += ' nav-close';
+if (window.screen.width > 576) {
+    navbar_nav[0].className += ' nav-open';
 };
 
 bar_button[0].addEventListener('click', () => {
-    navbar_nav[0].classList.remove('nav-close');
+    navbar_nav[0].className += ' nav-open';
     bar_button[0].className += ' d-none';
     close_button[0].classList.remove('d-none');
 });
@@ -52,7 +53,7 @@ bar_button[0].addEventListener('click', () => {
 close_button[0].addEventListener('click', ()=> {
     close_button[0].className += ' d-none';
     bar_button[0].classList.remove('d-none');
-    navbar_nav[0].className += ' nav-close';
+    navbar_nav[0].classList.remove('nav-open');
 });
 
 search_button[0].addEventListener('click', ()=>{

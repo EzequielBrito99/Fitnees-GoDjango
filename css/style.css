@@ -45,6 +45,11 @@
     background-color: white;
     color: black;
     z-index: 1000;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
     transition: transform .6s ease;
     -moz-transition: transform .6s ease;
     -ms-transition: transform .6s ease;
@@ -52,12 +57,12 @@
     -webkit-transition: transform .6s ease;
 }
 
-.nav-close {
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
+.nav-open {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
     transition: transform .6s ease;
     -moz-transition: transform .6s ease;
     -ms-transition: transform .6s ease;
@@ -135,6 +140,7 @@ Estilos del Catalogo
 .product-wrapper {
     min-height: 300px;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .product-img-wrapper {
@@ -300,6 +306,10 @@ Estilos de Catalog
     background-color: rgba(0, 0, 0, .9);
     padding: .5rem 1.5rem;
     border: 0;
+}
+
+.sort-button, .availability-button, .availability-close-button, .price-button, .price-close-button{
+    cursor: pointer;
 }
 
 
