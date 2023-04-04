@@ -18,6 +18,27 @@ let counter_num = document.getElementsByClassName('counter-num');
 let counter_sub = document.getElementsByClassName('counter-sub');
 let counter_sum = document.getElementsByClassName('counter-sum');
 
+function navigateToProduct (){
+    console.log(window.location.href)
+    if(window.location.href == 'http://127.0.0.1:5500/index.html'){
+        window.location.href = 'pages/product.html';
+    }else{
+        window.location.href = 'product.html';
+    }
+}
+
+function sumar (pos) {
+    let currentValue = parseInt(counter_num[pos].innerHTML);
+    counter_num[pos].innerHTML = (currentValue + 1);
+};
+
+function restar (pos) {
+    let currentValue = parseInt(counter_num[pos].innerHTML);
+    if(currentValue > 1){
+        counter_num[pos].innerHTML = (currentValue - 1);
+    }
+};
+
 if (window.screen.width < 576) {
     navbar_nav[0].className += ' nav-close';
 };
@@ -74,23 +95,5 @@ price_close_button[1].addEventListener('click', ()=>{
     price_wrapper[0].className += ' price-close';
 });
 
-function navigateToProduct (){
-    console.log(window.location.href)
-    if(window.location.href == 'http://127.0.0.1:5500/index.html'){
-        window.location.href = 'pages/product.html';
-    }else{
-        window.location.href = 'product.html';
-    }
-}
 
-function sumar (pos) {
-    let currentValue = parseInt(counter_num[pos].innerHTML);
-    counter_num[pos].innerHTML = (currentValue + 1);
-};
 
-function restar (pos) {
-    let currentValue = parseInt(counter_num[pos].innerHTML);
-    if(currentValue > 1){
-        counter_num[pos].innerHTML = (currentValue - 1);
-    }
-};

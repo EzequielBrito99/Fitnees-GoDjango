@@ -318,6 +318,12 @@ Estilos de Cart
     width: 70%;
 }
 
+.pay-wrapper button {
+    padding: .5rem 2.6rem;
+    background-color: rgb(22, 20, 20);
+    color: white;
+}
+
 
 /**********************
 Estilos de Contacto
@@ -344,7 +350,7 @@ Estilos de Contacto
     height: 200px;
 }
 
-.contact-wrapper button, .pay-wrapper button {
+.contact-wrapper button {
     padding: .5rem 2.6rem;
     background-color: rgb(22, 20, 20);
     color: white;
